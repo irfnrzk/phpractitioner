@@ -26,16 +26,19 @@ require 'functions.php';
 // ];
 
 // $tasks[0]->complete();
-
 // $task = new Task('Go to the store');
 // $task->complete();
-
 // dd($tasks);
 
+$query = require 'bootstrap.php';
 require 'Task.php';
 
-$pdo = connectToDb();
-$tasks = fetchTask($pdo);
-//dd($tasks);
+
+
+$tasks = $query->selectAll('todos', 'Task');
+
+//$tasks = fetchTask($pdo);
+dd($tasks);
 //dd($results);
+
 require 'index.view.php';
