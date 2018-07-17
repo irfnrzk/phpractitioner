@@ -10,4 +10,4 @@ $query = require 'core/bootstrap.php';
 // require $router->direct($uri);
 
 $router = Router::load('routes.php');
-require $router->direct(Request::uri());
+require $router->direct(Request::uri(), Request::method());

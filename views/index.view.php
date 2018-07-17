@@ -11,4 +11,12 @@
       <?php endforeach; ?>
   </ul>
 
+  <form method="POST" action="/names">
+
+    <input name="name" type="text"></input> 
+
+    <button>Submit</button> 
+  
+  </form>
+
 <?php require('partials/footer.php'); ?>
