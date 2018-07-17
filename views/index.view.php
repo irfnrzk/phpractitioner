@@ -6,6 +6,10 @@
   <title>Document</title>
 </head>
 <body>   
+  <ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
   <h1>Task</h1>
   <ul>
       <?php foreach ($tasks as $task) : ?>
