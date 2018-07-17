@@ -1,7 +1,9 @@
 <?php
 
-$users = $app['database']->selectAll('users', 'Task');
+$users = App::get('database')->selectAll('users');
 
 //dd($tasks);
+
+//die(var_dump($users));
 
 require 'views/index.view.php';

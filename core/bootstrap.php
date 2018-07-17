@@ -1,14 +1,8 @@
 <?php
 
-$app = [];
+App::bind('config', require 'config.php'); 
 
-$app['$config'] = require 'config.php';
 
-// require 'core/Router.php';
-// require 'core/Request.php';
-// require 'core/database/Connection.php';
-// require 'core/database/QueryBuilder.php';
+$pdo = Connection::make(App::get('config')['database']);
 
-$pdo = Connection::make($app['$config']['database']);
-
-$app['database'] = new QueryBuilder($pdo);
+App::bind('database', new QueryBuilder($pdo));
